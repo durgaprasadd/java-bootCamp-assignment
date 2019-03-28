@@ -5,9 +5,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.StringReader;
 
-import com.assignment.refactor.Customer;
-import com.assignment.refactor.Movie;
-import com.assignment.refactor.Rental;
 import junit.framework.TestCase;
 
 public class CustomerTest extends TestCase {
@@ -16,11 +13,11 @@ public class CustomerTest extends TestCase {
 
     private Customer dinsdale = new Customer("Dinsdale Pirhana");
 
-    private Movie python = new Movie("Monty Python and the Holy Grail", Movie.REGULAR);
-	private Movie ran = new Movie("Ran", Movie.REGULAR);
-	private Movie la = new Movie("LA Confidential", Movie.NEW_RELEASE);
-	private Movie trek = new Movie("Star Trek 13.2", Movie.NEW_RELEASE);
-	private Movie wallace = new Movie("Wallace and Gromit", Movie.CHILDRENS);
+    private Movie python = new Movie("Monty Python and the Holy Grail", PriceCode.REGULAR);
+	private Movie ran = new Movie("Ran", PriceCode.REGULAR);
+	private Movie la = new Movie("LA Confidential", PriceCode.NEW_RELEASE);
+	private Movie trek = new Movie("Star Trek 13.2", PriceCode.NEW_RELEASE);
+	private Movie wallace = new Movie("Wallace and Gromit", PriceCode.CHILDREN);
 
     public void setUp (){
        dinsdale.addRental(new Rental(python, 3));
@@ -39,7 +36,7 @@ public class CustomerTest extends TestCase {
     }
 
     public void testChange() throws Exception {
-    	la.setPriceCode(Movie.REGULAR);
+    	la.setPriceCode(PriceCode.REGULAR);
         equalsFile("1st Output", "outputChange", dinsdale.statement());
     }
 

@@ -1,27 +1,23 @@
 package com.assignment.refactor;
 
-public class Movie {
-    public static final int CHILDRENS = 2;
-    public static final int REGULAR = 0;
-    public static final int NEW_RELEASE = 1;
-
+class Movie {
     private String title;
-    private int priceCode;
+    private PriceCode priceCode;
 
-    public Movie(String title, int priceCode) {
+    Movie(String title, PriceCode priceCode) {
         this.title = title;
         this.priceCode = priceCode;
     }
 
-    public int getPriceCode() {
+    PriceCode getPriceCode() {
         return priceCode;
     }
 
-    public void setPriceCode(int arg) {
-        priceCode = arg;
+    void setPriceCode(PriceCode priceCode) {
+        this.priceCode = priceCode;
     }
 
-    public String getTitle() {
+    String getTitle() {
         return title;
     }
 }
