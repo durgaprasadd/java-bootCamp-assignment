@@ -18,4 +18,12 @@ class Rental {
     Movie getMovie() {
         return movie;
     }
+
+    double calculateTotalRent() {
+        return this.movie.calculateTotalRent(this.daysRented);
+    }
+
+    int getFrequentRenterPoints(){
+        return this.movie.getFrequentRenterPoints(this.daysRented);
+    }
 }
