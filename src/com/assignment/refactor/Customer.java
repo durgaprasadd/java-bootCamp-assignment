@@ -15,7 +15,12 @@ class Customer {
     }
 
     String statement() {
-        return this.rentalList.getStatement(name);
+        Formatter formatter = new StringStatementFormatter(name);
+        return this.rentalList.getStatement(formatter);
     }
 
+    public String htmlStatement() {
+        Formatter formatter = new HtmlStatementFormatter(name);
+        return this.rentalList.getStatement(formatter);
+    }
 }

@@ -13,19 +13,18 @@ class RentalList {
         rentalList.add(rental);
     }
 
-    String getStatement(String name) {
+    String getStatement(Formatter formatter) {
         double totalAmount = 0;
         int frequentRenterPoints = rentalList.size();
-        Formatter result = new Formatter(name);
         for (Rental rental : rentalList) {
             final Movie movie = rental.getMovie();
             frequentRenterPoints += rental.getFrequentRenterPoints();
             double totalRent = rental.calculateTotalRent();
-            result.addRentDetails(movie.getTitle(), totalRent);
+            formatter.addRentDetails(movie.getTitle(), totalRent);
             totalAmount += totalRent;
         }
-        result.addAmountDetails(totalAmount);
-        result.addFrequencyPoints(frequentRenterPoints);
-        return result.getStatement();
+        formatter.addAmountDetails(totalAmount);
+        formatter.addFrequencyPoints(frequentRenterPoints);
+        return formatter.getStatement();
     }
 }
