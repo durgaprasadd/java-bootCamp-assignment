@@ -11,10 +11,6 @@ class Rental {
         this.daysRented = daysRented;
     }
 
-    int getDaysRented() {
-        return daysRented;
-    }
-
     Movie getMovie() {
         return movie;
     }

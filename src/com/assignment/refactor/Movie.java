@@ -14,10 +14,6 @@ class Movie {
         this.priceCode = priceCodeFactory.getPriceCode(priceCode);
     }
 
-    int getPriceCode() {
-        return priceCode.getValue();
-    }
-
     void setPriceCode(int priceCode) {
         PriceCodeFactory priceCodeFactory = new PriceCodeFactory();
         this.priceCode = priceCodeFactory.getPriceCode(priceCode);

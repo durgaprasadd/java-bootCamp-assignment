@@ -4,7 +4,6 @@ public class Regular implements PriceCode {
     private static double initialRent = 2;
     private static int delayTime = 2;
     private static double delayRent = 1.5;
-    private static int value = 2;
 
     @Override
     public double getTotalRent(int daysRented) {
@@ -20,8 +19,4 @@ public class Regular implements PriceCode {
         return 0;
     }
 
-    @Override
-    public int getValue() {
-        return value;
-    }
 }

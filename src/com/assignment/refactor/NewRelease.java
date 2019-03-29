@@ -2,8 +2,6 @@ package com.assignment.refactor;
 
 public class NewRelease implements PriceCode {
     private static double rent = 3;
-    private static int value = 2;
-
 
     @Override
     public double getTotalRent(int daysRented) {
@@ -16,8 +14,4 @@ public class NewRelease implements PriceCode {
         return 0;
     }
 
-    @Override
-    public int getValue() {
-        return value;
-    }
 }

@@ -6,5 +6,4 @@ public interface PriceCode {
 
     int getFrequentRenterPoints(int daysRented);
 
-    int getValue();
 }

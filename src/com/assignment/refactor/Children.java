@@ -4,7 +4,6 @@ public class Children implements PriceCode {
     private static double initialRent = 1.5;
     private static int delayTime = 3;
     private static double delayRent = 1.5;
-    private static int value = 2;
 
     @Override
     public double getTotalRent(int daysRented) {
@@ -20,9 +19,5 @@ public class Children implements PriceCode {
         return 0;
     }
 
-    @Override
-    public int getValue() {
-        return value;
-    }
 }
 

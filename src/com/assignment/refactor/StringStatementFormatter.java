@@ -3,7 +3,7 @@ package com.assignment.refactor;
 public class StringStatementFormatter implements  Formatter{
     private String statement;
 
-    public StringStatementFormatter(String name) {
+    StringStatementFormatter(String name) {
         this.statement = "Rental Record for " + name + "\n";
     }
 
